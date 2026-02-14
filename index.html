@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support Game</title>
+<title>SupportGamer</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
 <style>
@@ -16,89 +15,122 @@
 }
 
 body{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     background:#0a0a0f;
     font-family:'Orbitron',sans-serif;
     overflow:hidden;
+    color:white;
 }
 
-/* Background Glow */
+/* ==== Cyber Background ==== */
 body::before{
     content:"";
     position:absolute;
-    width:600px;
-    height:600px;
+    width:800px;
+    height:800px;
     background:radial-gradient(circle,#00f0ff33,#ff00ff22,transparent 70%);
-    filter:blur(80px);
-    animation:moveGlow 8s linear infinite alternate;
+    filter:blur(120px);
+    animation:moveGlow 10s linear infinite alternate;
+    z-index:-1;
 }
 
 @keyframes moveGlow{
-    from{transform:translate(-100px,-50px);}
-    to{transform:translate(100px,50px);}
+    from{transform:translate(-150px,-100px);}
+    to{transform:translate(150px,100px);}
 }
 
+/* ==== Card Panel ==== */
+.card{
+    width:500px;
+    padding:50px 40px;
+    border-radius:25px;
+    background:rgba(20,25,40,0.7);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(0,255,255,0.3);
+    box-shadow:0 0 60px rgba(0,255,255,0.3);
+    text-align:center;
+    position:relative;
+}
+
+/* ==== Logo ==== */
 .logo{
-    font-size:70px;
+    font-size:48px;
     font-weight:900;
     letter-spacing:4px;
-    text-transform:uppercase;
     background:linear-gradient(90deg,#00f0ff,#ff00ff,#00ffcc);
     background-size:300%;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     animation:gradientMove 6s ease infinite;
-    transition:all 0.3s ease;
-    cursor:pointer;
-    text-align:center;
-    position:relative;
+    margin-bottom:20px;
 }
 
-/* Gradient Animation */
 @keyframes gradientMove{
     0%{background-position:0%}
     50%{background-position:100%}
     100%{background-position:0%}
 }
 
-/* Glow Effect */
-.logo::after{
-    content:"Support Game";
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    text-align:center;
-    color:#00f0ff;
-    filter:blur(20px);
-    opacity:0.6;
-    z-index:-1;
+/* ==== Info ==== */
+.info{
+    font-size:14px;
+    line-height:1.8;
+    opacity:0.85;
+    margin-bottom:30px;
 }
 
-/* Hover Effects */
-.logo:hover{
-    transform:scale(1.05);
-    animation:shake 0.2s infinite;
+/* ==== Download Button ==== */
+.download-btn{
+    display:inline-block;
+    padding:15px 40px;
+    border-radius:50px;
+    background:linear-gradient(45deg,#00f0ff,#ff00ff);
+    color:#000;
+    font-weight:900;
+    text-decoration:none;
+    box-shadow:0 0 25px #00f0ff;
+    transition:0.3s;
 }
 
-/* Shake */
-@keyframes shake{
-    0%{transform:translate(0)}
-    25%{transform:translate(2px,-2px)}
-    50%{transform:translate(-2px,2px)}
-    75%{transform:translate(2px,2px)}
-    100%{transform:translate(0)}
+.download-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 60px #ff00ff;
+}
+
+/* ==== Small Footer ==== */
+.footer{
+    margin-top:25px;
+    font-size:12px;
+    opacity:0.5;
 }
 </style>
 </head>
 
 <body>
 
-<div class="logo">
-    Support Game
+<div class="card">
+
+    <div class="logo">SupportGamer</div>
+
+    <div class="info">
+        ✓ Profile tối ưu DNS cho gaming<br>
+        ✓ Giảm độ trễ khi chơi game<br>
+        ✓ Ổn định mạng<br>
+        ✓ Tương thích iOS 14+
+    </div>
+
+    <!-- ĐỔI LINK FILE Ở ĐÂY -->
+    <a href="SupportGamer.mobileconfig" class="download-btn" download>
+        DOWNLOAD
+    </a>
+
+    <div class="footer">
+        SupportGamer Network Optimization Profile
+    </div>
+
 </div>
 
 </body>

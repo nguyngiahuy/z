@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.supportgamer.ios.profile</string>
+    <key>PayloadUUID</key>
+    <string>SG-2026-PRO-0001</string>
+
+    <key>PayloadDisplayName</key>
+    <string>SupportGamer – Gaming Network Profile</string>
+
+    <key>PayloadOrganization</key>
+    <string>SupportGamer Official</string>
+
+    <key>PayloadDescription</key>
+    <string>
+SupportGamer Network Optimization Profile
+
+TÍNH NĂNG:
+• Tối ưu DNS giảm độ trễ
+• Ổn định kết nối khi chơi game
+• Giảm delay phản hồi mạng
+• Tăng tốc game
+
+THÔNG TIN:
+Website: supportgamer.vn
+Version: 1.0
+Compatibility: iOS 14+
+
+Lưu ý:
+Profile chỉ chứa cấu hình DNS bảo mật.
+Không can thiệp phần cứng hoặc hệ thống.
+    </string>
+
+    <key>PayloadContent</key>
+    <array>
+
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.supportgamer.dns</string>
+            <key>PayloadUUID</key>
+            <string>SG-DNS-2026-PRO</string>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>https://1.1.1.1/dns-query</string>
+            </dict>
+        </dict>
+
+    </array>
+
+</dict>
+</plist>
